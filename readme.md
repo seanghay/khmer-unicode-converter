@@ -2,7 +2,7 @@
 
 Extremely lightweight and has no dependencies. 
 
-The implementation is heavily based on an amazing C# project
+The implementation is heavily based on an amazing project
 [**[olivierberten/KhmerConverter]**](https://github.com/olivierberten/KhmerConverter)
 
 
