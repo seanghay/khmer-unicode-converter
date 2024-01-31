@@ -1,0 +1,28 @@
+{
+  "name": "khmer-unicode-converter",
+  "description": "Khmer Unicode Converter written in JavaScript.",
+  "version": "0.0.1",
+  "license": "Apache-2.0",
+  "main": "index.js",
+  "author": {
+    "name": "Seanghay Yath",
+    "email": "seanghay.dev@gmail.com",
+    "url": "https://github.com/seanghay"
+  },
+  "scripts": {
+    "test": "ava"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
+  "repository": "seanghay/khmer-unicode-converter",
+  "keywords": [
+    "khmer",
+    "khmer-unicode",
+    "limon"
+  ],
+  "devDependencies": {
+    "ava": "*"
+  }
+}
