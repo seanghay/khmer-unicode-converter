@@ -1,5 +1,7 @@
 ## Khmer Unicode Converter for JavaScript
 
+[[View Demo]](https://khmer.floo.app)
+
 Extremely lightweight and has no dependencies. 
 
 The implementation is heavily based on an amazing project
