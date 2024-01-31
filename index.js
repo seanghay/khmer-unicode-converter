@@ -1,4 +1,10 @@
 'use strict';
+
+/**
+* The implementation is heavily based on an amazing project 
+* [**[olivierberten/KhmerConverter]**](https://github.com/olivierberten/KhmerConverter)
+*/
+
 const len = s =>
   typeof s === 'string' ? s.length :
     'size' in s ? s.size : s.length;
