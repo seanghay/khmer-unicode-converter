@@ -495,11 +495,14 @@ function limon(text) {
       text = text.replaceAll(replacer, replacement);
     }
   }
+
   for (let [replacement, replacer] of LIMON_REPLACERS) {
+    if (replacer === ',') continue;
     if (!replacer.startsWith("\u17d2")) {
       text = text.replaceAll(replacer, replacement);
     }
   }
+
   return text.replace(/\u17ea/g, '');
 }
 
