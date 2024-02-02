@@ -455,9 +455,7 @@ let LIMON_REPLACERS = [
   [[0x62, 0xa3], "ឫ"],
   [[0x42, 0xa4], "ឮ"],
   [[0x62, 0xa4], "ឬ"],
-  //
-  [0x7b, "«"],
-  [0x7d, "»"],
+  
   [0xb3, "៖"],
   [0xbf, "\u17EAំ"],
 
@@ -474,7 +472,7 @@ let LIMON_REPLACERS = [
   [0x2e, "៕"],
   [0x5b, "ឲ\u17d2យ"],
   [0xb4, "ខ\u17d2ញ\u17EAុំ"],
-  [0x5b, "ឲ"],
+  [0xbb, "ឲ"],
   [0xfe, "\u17d2ដ"],
 ];
 
@@ -489,13 +487,13 @@ function limon(text) {
   text = reorder(text);
 
   for (let [replacement, replacer] of LIMON_REPLACERS) {
-    if (replacer.startsWith("\u17d2")) {
+    if (replacer.includes('\u17d2')) {
       text = text.replaceAll(replacer, replacement);
     }
   }
 
   for (let [replacement, replacer] of LIMON_REPLACERS) {
-    if (!replacer.startsWith("\u17d2")) {
+    if (!replacer.includes("\u17d2")) {
       text = text.replaceAll(replacer, replacement);
     }
   }

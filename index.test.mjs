@@ -6,4 +6,13 @@ test("convert", t => {
   t.is(limon("សម្រាប់ស្បែកខ្មៅ"), 'sRmab;Es,kexµA');
   t.is(limon("សម្រាប់ស្បែកខ្មៅ,"), 'sRmab;Es,kexµA,');
   t.is(limon("ស៊ាន"), 's‘an');
+  
+  t.is(limon("ការឲ្យ"), 'kar[');
+  t.is(limon("ការឱ្យ"), 'kar[');
+  t.is(limon("ការឱ"), 'kar»');
+  t.is(limon("ការឲ"), 'kar»');
+  t.is(limon("ឲ"), '»');
+  t.is(limon("ឲ្យ"), '[');
+  t.is(limon("ឱ្យ"), '[');
+  t.is(limon("ឱ"), '»');
 })
