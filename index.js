@@ -312,8 +312,6 @@ let LIMON_REPLACERS = [
   //
   [0x2b, "៎"],
   [0x2c, "\u17D2ប"],
-  [0x2d, "-"],
-  [0x2f, ","],
   [0x3c, "\u17D2ព"],
   [0x41, "ៅ"],
   [0x42, "ព"],
@@ -435,8 +433,8 @@ let LIMON_REPLACERS = [
   [0x7b, "\u201c"],
   [0x7c, "ឦ"],
   [0x7d, "\u201d"],
-  [0x91, "៊"],
-  [0x92, "៌"],
+  [0x2018, "៊"],
+  [0x2019, "៌"],
   [0xa1, "!"],
   [0xa5, "\u17D2អ"],
   [0xab, "ឪ"],
@@ -459,7 +457,6 @@ let LIMON_REPLACERS = [
   [[0x62, 0xa4], "ឬ"],
   //
   [0x7b, "«"],
-  [0x7b, "‘"],
   [0x7d, "»"],
   [0xb3, "៖"],
   [0xbf, "\u17EAំ"],
@@ -472,7 +469,7 @@ let LIMON_REPLACERS = [
   [0xb0, "%"],
   [0xb4, "ខ\u17d2ញុំ"],
   [0xbc, "/"],
-  [[0x5d, 0x91], "ឨ"],
+  [[0x5d, 0x2018], "ឨ"],
 
   [0x2e, "៕"],
   [0x5b, "ឲ\u17d2យ"],
@@ -490,6 +487,7 @@ LIMON_REPLACERS = LIMON_REPLACERS.map(([replacement, replacer]) => {
 
 function limon(text) {
   text = reorder(text);
+
   for (let [replacement, replacer] of LIMON_REPLACERS) {
     if (replacer.startsWith("\u17d2")) {
       text = text.replaceAll(replacer, replacement);
@@ -497,7 +495,6 @@ function limon(text) {
   }
 
   for (let [replacement, replacer] of LIMON_REPLACERS) {
-    if (replacer === ',') continue;
     if (!replacer.startsWith("\u17d2")) {
       text = text.replaceAll(replacer, replacement);
     }
@@ -507,3 +504,4 @@ function limon(text) {
 }
 
 exports.limon = limon;
+
