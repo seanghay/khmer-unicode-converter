@@ -15,4 +15,7 @@ test("convert", t => {
   t.is(limon("ឲ្យ"), '[');
   t.is(limon("ឱ្យ"), '[');
   t.is(limon("ឱ"), '»');
+  t.is(limon("ស៊ី"), 'suI');
+  t.is(limon("អ៊ី"), 'GuI');
+  t.is(limon("ស៊ើប"), 'esuIb');
 })
