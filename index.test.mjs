@@ -16,6 +16,15 @@ test("convert", t => {
   t.is(limon("ឱ្យ"), '[');
   t.is(limon("ឱ"), '»');
   t.is(limon("ស៊ី"), 'suI');
+  
   t.is(limon("អ៊ី"), 'GuI');
+  t.is(limon("អ៊ឺ"), 'GuW');
+  t.is(limon("អ៊ឹ"), 'Guw');
+  t.is(limon("អ៊ិ"), 'Gui');
+
   t.is(limon("ស៊ើប"), 'esuIb');
+  t.is(limon("ប៉ី"), 'buI');
+  t.is(limon("ប៉ិ"), 'bui');
+  t.is(limon("ប៉ឹ"), 'buw');
+  t.is(limon("ប៉ឺ"), 'buW');
 })

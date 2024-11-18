@@ -620,7 +620,17 @@ LIMON_REPLACERS = LIMON_REPLACERS.map(([replacement, replacer]) => {
 
 function limon(text) {
 	text = reorder(text);
+	
+	text = text.replace(/[\u1780-\u17ff]\u17ca\u17b7/gm, "ui");
 	text = text.replace(/[\u1780-\u17ff]\u17ca\u17b8/gm, "uI");
+	text = text.replace(/[\u1780-\u17ff]\u17ca\u17b9/gm, "uw");
+	text = text.replace(/[\u1780-\u17ff]\u17ca\u17ba/gm, "uW");
+
+	text = text.replace(/[\u1780-\u17ff]\u17c9\u17b7/gm, "ui");
+	text = text.replace(/[\u1780-\u17ff]\u17c9\u17b8/gm, "uI");
+	text = text.replace(/[\u1780-\u17ff]\u17c9\u17b9/gm, "uw");
+	text = text.replace(/[\u1780-\u17ff]\u17c9\u17ba/gm, "uW");
+	
 	
 	for (let [replacement, replacer] of LIMON_REPLACERS) {
 		if (replacer.includes("\u17d2")) {
