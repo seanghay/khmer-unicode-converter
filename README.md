@@ -60,15 +60,6 @@ writing legacy files.
 `limon(text)` is the same API as version 0.0.8 and keeps its exact behavior
 (including `,` passthrough and `ឲ`/`៕` handling).
 
-## Web UI
-
-A minimal browser converter lives in `web/`:
-
-```shell
-npm run web:dev    # dev server
-npm run web:build  # static build in web/dist/
-```
-
 ## Development
 
 ```shell
