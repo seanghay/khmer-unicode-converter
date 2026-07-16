@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fontdata SYSTEM "<http://www.khmeros.info/download/fontdata.dtd" [
+<!-- the mark entity is used for conversion from unicode to legacy 
+        it represents the 0x17EA character in UTF-8 -->
+<!ENTITY mark "&#x17EA;">
+]>
+
+<!-- This is test data for the UnitTest, do no change it unless you know what you
+    are doing ;-)
+-->
+
+<fontdata version="1.0">
+    <fonts>
+        <font type="abc">
+            <maps>
+                <tounicode>
+                    <map legacy="0x21" unicode="1"/>
+                    <map legacy="0x21" unicode="3"/>
+                </tounicode>
+            </maps>
+        </font>
+    </fonts>
+</fontdata>

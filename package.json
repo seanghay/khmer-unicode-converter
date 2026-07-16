@@ -1,28 +1,58 @@
 {
   "name": "khmer-unicode-converter",
-  "description": "Khmer Unicode Converter written in JavaScript.",
-  "version": "0.0.8",
-  "license": "Apache-2.0",
-  "main": "index.js",
+  "version": "1.0.0",
+  "description": "Convert Khmer text between legacy font encodings (Limon, ABC, Baidok, ...) and Khmer Unicode.",
+  "license": "GPL-2.0-or-later",
   "author": {
     "name": "Seanghay Yath",
     "email": "seanghay.dev@gmail.com",
     "url": "https://github.com/seanghay"
   },
-  "scripts": {
-    "test": "ava"
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "khmerconvert": "./dist/cli.js"
   },
   "files": [
-    "index.js",
-    "index.d.ts"
+    "dist",
+    "README.md",
+    "LICENSE"
   ],
-  "repository": "seanghay/khmer-unicode-converter",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "gen:fontdata": "tsx scripts/generate-fontdata.ts",
+    "web:dev": "vite",
+    "web:build": "vite build",
+    "prepublishOnly": "npm run build"
+  },
   "keywords": [
     "khmer",
     "khmer-unicode",
-    "limon"
+    "limon",
+    "abc",
+    "unicode",
+    "legacy-fonts",
+    "converter",
+    "cambodia"
   ],
+  "repository": "seanghay/khmer-unicode-converter",
   "devDependencies": {
-    "ava": "*"
+    "@types/node": "^26.1.1",
+    "fast-xml-parser": "^4.5.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0",
+    "vite": "^5.4.0",
+    "vitest": "^2.1.0"
   }
 }

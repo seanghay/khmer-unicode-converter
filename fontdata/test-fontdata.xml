@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fontdata SYSTEM "<http://www.khmeros.info/download/fontdata.dtd" [
+<!-- the mark entity is used for conversion from unicode to legacy 
+        it represents the 0x17EA character in UTF-8 -->
+<!ENTITY mark "&#x17EA;">
+]>
+
+<!-- This is test data for the UnitTest, do no change it unless you know what you
+    are doing ;-)
+-->
+
+<fontdata version="1.0">
+    <fonts>
+        <font type="hidden" hidden="true" >
+            <maps>
+                <global>
+                  <map legacy="0x61" unicode="កក" />
+                </global>
+            </maps>
+        </font>
+        <font type="abc" inherit="hidden">
+            <aliases>
+                <alias name="head01" />
+                <alias name="head02" />
+                <alias name="text01" />
+            </aliases>
+            <maps>
+                <global>
+                  <map legacy="0x62" unicode="ស" />
+                  <map legacy="0x63" unicode="&#x200b;" />
+                </global>
+
+                <tounicode>
+                  <map legacy="0x62;0xff" unicode="ឫ" />
+                </tounicode>
+                
+                <fromunicode>
+                  <map unicode="&#x200c;" legacy="" />
+                  <map unicode="ខ្រ" legacy="0x5f;0x5f" />
+                </fromunicode>
+            </maps>
+        </font>
+        <font type="abc-zwsp" inherit="abc">
+            <maps>
+                <global>
+                  <map legacy="0x31" unicode="១" />
+                </global>
+                
+                <tounicode>
+                  <map legacy="0x31;0x3f" unicode="" />
+                </tounicode>                
+            </maps>
+        </font>
+        <font type="abc-3" inherit="abc-zwsp">
+            <maps />
+        </font>
+        <font type="limon">
+            <maps />
+        </font>
+    </fonts>
+</fontdata>
