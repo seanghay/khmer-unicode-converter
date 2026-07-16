@@ -60,24 +60,6 @@ writing legacy files.
 `limon(text)` is the same API as version 0.0.8 and keeps its exact behavior
 (including `,` passthrough and `ឲ`/`៕` handling).
 
-## CLI
-
-```
-khmerconvert [options] [input] [output]
-
-  -l, --list-fonts       list supported fonts
-  -c, --list-encodings   list supported input encodings
-  -o, --to-legacy        convert Unicode -> legacy (default: legacy -> Unicode)
-  -e, --encoding <enc>   encoding of legacy input (default: cp1252)
-  -f, --font <name>      legacy font type, name, or alias (default: abc-zwsp)
-```
-
-```shell
-echo 'kxK' | khmerconvert -f abc -          # => កខគ
-khmerconvert -f limon legacy.txt            # writes converted-legacy.txt (UTF-8)
-khmerconvert -o -f limon unicode.txt out.txt
-```
-
 ## Web UI
 
 A minimal browser converter lives in `web/`:

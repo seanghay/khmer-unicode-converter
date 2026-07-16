@@ -17,9 +17,6 @@
       "default": "./dist/index.js"
     }
   },
-  "bin": {
-    "khmerconvert": "./dist/cli.js"
-  },
   "files": [
     "dist",
     "README.md",
