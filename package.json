@@ -1,6 +1,6 @@
 {
   "name": "khmer-unicode-converter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Convert Khmer text between legacy font encodings (Limon, ABC, Baidok, ...) and Khmer Unicode.",
   "license": "GPL-2.0-or-later",
   "author": {
